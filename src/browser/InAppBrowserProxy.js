@@ -88,7 +88,7 @@ var IAB = {
 
         if (target === '_self' || !target) {
             window.location = strUrl;
-        } else if (target === '_system') {
+        } else if (target === '_system' || target === '_blank') {
             modulemapper.getOriginalSymbol(window, 'window.open').call(window, strUrl, '_blank');
         } else {
             // "_blank" or anything else
